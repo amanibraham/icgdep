@@ -4,7 +4,7 @@
     "description": "",
     "main": "app/main.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "npm run build:vendors && webpack-dev-server --config=webpack.app.config.js ",
         "build": "npm run build:app && npm run build:vendors",
         "build:app": "webpack --config=webpack.app.config.js",
         "build:vendors": "webpack --config=webpack.vendors.config.js",
